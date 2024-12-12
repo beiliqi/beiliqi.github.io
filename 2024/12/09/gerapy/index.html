@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="John Doe">
+  
+
+  
+
+  
+
+  <title>Hexo</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Hexo
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/archives">归档</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">友链</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap"></h1>
+          <h2 class="title-sub-wrap">
+            <strong>John Doe</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2024-12-09T03:10:26.759Z" itemprop="datePublished">2024-12-09</time>
+          </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="分布式爬虫管理框架gerapy"><a href="#分布式爬虫管理框架gerapy" class="headerlink" title="分布式爬虫管理框架gerapy"></a>分布式爬虫管理框架gerapy</h1><p>:::<br>Gerapy 是一个基于 Scrapy 的分布式爬虫框架，旨在为大规模爬虫任务提供更高效的管理和调度功能。它支持分布式任务调度、集中式配置管理、爬虫任务监控和日志管理等功能，非常适合用于多节点分布式环境下的大规模数据抓取。<br>:::</p>
+<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><h3 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h3><p>Gerapy的主要特性：</p>
+<p>    1、<strong>Web界面管理</strong>：通过 Web 界面方便地管理和监控爬虫项目，可视化展示爬取数据和日志。</p>
+<p>    2、<strong>分布式部署</strong>：支持将爬虫项目部署到多台服务器上，实现分布式爬取，提高爬取效率。</p>
+<p>    3、<strong>定时任务</strong>：支持设置定时任务，定期运行爬虫程序，自动获取最新数据。</p>
+<p>    4、<strong>爬虫项目管理</strong>：提供统一的界面管理爬虫项目，包括配置、部署、启动、停止等操作。</p>
+<p>    5、<strong>日志管理</strong>：记录爬虫项目的运行日志，方便用户查看和分析爬取过程。</p>
+<p>    6、<strong>支持多平台</strong>：Gerapy支持Python 3.5及以上版本，可以运行在Linux、Windows和MacOS系统上。</p>
+<p>    7、<strong>二次开发</strong>：Gerapy还提供了RESTful API和CLI命令行接口，方便用户进行二次开发和集成。</p>
+<h3 id="2、安装依赖"><a href="#2、安装依赖" class="headerlink" title="2、安装依赖"></a>2、安装依赖</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># macos &amp; linux 激活虚拟环境</span></span><br><span class="line">source env-python38/<span class="built_in">bin</span>/activate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">pip install scrapy==<span class="number">2.11</span><span class="number">.2</span></span><br><span class="line">pip install scrapy-redis==<span class="number">0.9</span><span class="number">.1</span></span><br><span class="line">pip install kafka-python==<span class="number">2.0</span><span class="number">.2</span></span><br><span class="line">pip install urllib3==<span class="number">1.26</span><span class="number">.15</span></span><br><span class="line">pip install scrapyd==<span class="number">1.5</span><span class="number">.0</span></span><br><span class="line">pip install gerapy==<span class="number">0.9</span><span class="number">.13</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二、scrapyd配置启动"><a href="#二、scrapyd配置启动" class="headerlink" title="二、scrapyd配置启动"></a>二、scrapyd配置启动</h2><h3 id="1、修改项目配置文件"><a href="#1、修改项目配置文件" class="headerlink" title="1、修改项目配置文件"></a>1、修改项目配置文件</h3><p>在爬虫项目根目录下修改配置文件scrapy.cfg</p>
+<p>gerapy&#x2F;projects&#x2F;Ldoscrapyproducts&#x2F;scrapy.cfg</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[deploy]</span><br><span class="line"><span class="comment">#url = http://localhost:6800/</span></span><br><span class="line">project = Ldoscrapyproducts</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改如下</span></span><br><span class="line"></span><br><span class="line">[deploy:Ldoscrapyproducts]</span><br><span class="line">url = http://localhost:<span class="number">6800</span>/ <span class="comment"># 服务器地址</span></span><br><span class="line">project = Ldoscrapyproducts</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、配置-scrapyd"><a href="#2、配置-scrapyd" class="headerlink" title="2、配置 scrapyd"></a>2、配置 scrapyd</h3><p>为了让 Scrapyd 能够识别和管理我们的爬虫项目，需要在项目根目录创建一个名为scrapyd.conf的配置文件，如下所示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">[scrapyd]</span><br><span class="line"><span class="comment"># 项目的 eggs 存储位置</span></span><br><span class="line">eggs_dir    = eggs</span><br><span class="line"><span class="comment"># Scrapy日志的存储目录。如果要禁用存储日志，请将此选项设置为空，如下</span></span><br><span class="line"><span class="comment"># logs_dir = </span></span><br><span class="line">logs_dir    = logs</span><br><span class="line"><span class="comment"># Scrapyitem将被存储的目录，默认情况下禁用此选项，如果设置了 值，会覆盖 scrapy的 FEED_URI 配置项</span></span><br><span class="line">items_dir   =</span><br><span class="line"><span class="comment"># 每个蜘蛛保持完成的工作数量。默认为5</span></span><br><span class="line">jobs_to_keep = <span class="number">5</span></span><br><span class="line"><span class="comment"># 项目数据库存储的目录</span></span><br><span class="line">dbs_dir     = dbs</span><br><span class="line"><span class="comment"># 并发scrapy进程的最大数量，默认为0，没有设置或者设置为0时，将使用系统中可用的cpus数乘以max_proc_per_cpu配置的值</span></span><br><span class="line">max_proc    = <span class="number">0</span></span><br><span class="line"><span class="comment"># 每个CPU启动的进程数，默认4</span></span><br><span class="line">max_proc_per_cpu = <span class="number">4</span></span><br><span class="line"><span class="comment"># 保留在启动器中的完成进程的数量。默认为100</span></span><br><span class="line">finished_to_keep = <span class="number">100</span></span><br><span class="line"><span class="comment"># 用于轮询队列的时间间隔，以秒为单位。默认为5.0</span></span><br><span class="line">poll_interval = <span class="number">5.0</span></span><br><span class="line"><span class="comment"># webservices监听地址</span></span><br><span class="line">bind_address = <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line"><span class="comment"># 默认 http 监听端口</span></span><br><span class="line">http_port   = <span class="number">443</span></span><br><span class="line"><span class="comment"># 是否调试模式</span></span><br><span class="line">debug       = off</span><br><span class="line"><span class="comment"># 将用于启动子流程的模块，可以使用自己的模块自定义从Scrapyd启动的Scrapy进程</span></span><br><span class="line">runner      = scrapyd.runner</span><br><span class="line">application = scrapyd.app.application</span><br><span class="line">launcher    = scrapyd.launcher.Launcher</span><br><span class="line">webroot     = scrapyd.website.Root</span><br><span class="line"></span><br><span class="line">[services]</span><br><span class="line">schedule.json     = scrapyd.webservice.Schedule</span><br><span class="line">cancel.json       = scrapyd.webservice.Cancel</span><br><span class="line">addversion.json   = scrapyd.webservice.AddVersion</span><br><span class="line">listprojects.json = scrapyd.webservice.ListProjects</span><br><span class="line">listversions.json = scrapyd.webservice.ListVersions</span><br><span class="line">listspiders.json  = scrapyd.webservice.ListSpiders</span><br><span class="line">delproject.json   = scrapyd.webservice.DeleteProject</span><br><span class="line">delversion.json   = scrapyd.webservice.DeleteVersion</span><br><span class="line">listjobs.json     = scrapyd.webservice.ListJobs</span><br><span class="line">daemonstatus.json = scrapyd.webservice.DaemonStatus</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、启动scrapyd"><a href="#3、启动scrapyd" class="headerlink" title="3、启动scrapyd"></a>3、启动scrapyd</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动scrapyd</span></span><br><span class="line">scrapyd</span><br><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line">nohup scrapyd &gt; /dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、Gerapy配置启动"><a href="#三、Gerapy配置启动" class="headerlink" title="三、Gerapy配置启动"></a>三、Gerapy配置启动</h2><h3 id="1、新建一个项目"><a href="#1、新建一个项目" class="headerlink" title="1、新建一个项目"></a>1、新建一个项目</h3><p>在命令行执行如下命令创建一个Gerapy项目</p>
+<p><code>gerapy init</code></p>
+<p>会在当前目录下生成一个gerapy文件夹</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/af860deb-ba3e-49d0-92ac-460f4e999e57.png" alt="image.png"></p>
+<h3 id="2、数据库初始化"><a href="#2、数据库初始化" class="headerlink" title="2、数据库初始化"></a>2、数据库初始化</h3><p>进入gerapy目录，对数据库进行初始化</p>
+<p><code>gerapy migrate</code></p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/c18c0fc6-6e10-47a4-8dd0-86857e393bb0.png" alt="image.png"></p>
+<p>对数据库初始化之后会生成一个SQLite数据库，数据库保存主机配置信息和部署版本等</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/677cd900-9927-43a1-8872-0f15a6baee96.png" alt="image.png"></p>
+<h3 id="3、创建超级用户"><a href="#3、创建超级用户" class="headerlink" title="3、创建超级用户"></a>3、创建超级用户</h3><p>创建超级用户</p>
+<p><code>gerapy createsuperuser</code></p>
+<p>根据提示完成账号密码的设置</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/25c90cf7-d9ff-40b6-aea1-6b30a85d0f91.png" alt="image.png"></p>
+<h3 id="4、启动gerapy服务"><a href="#4、启动gerapy服务" class="headerlink" title="4、启动gerapy服务"></a>4、启动gerapy服务</h3><p>执行命令启动gerapy服务</p>
+<p><code>gerapy runserver</code></p>
+<p>默认启动命令为gerapy reserver ，如果要更改为外部访问+更改端口号，可使用如下命令</p>
+<p><code>gerapy runserver 0.0.0.0:8080</code></p>
+<p>浏览器访问<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/">http://127.0.0.1:8000</a>，输入账号密码登录</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/8f7c4f98-c9d2-47a5-ada4-ad76559b8eed.png" alt="image.png"></p>
+<h2 id="四、Gerapy配置管理Scrapy项目"><a href="#四、Gerapy配置管理Scrapy项目" class="headerlink" title="四、Gerapy配置管理Scrapy项目"></a>四、Gerapy配置管理Scrapy项目</h2><p>在配置主机、启动主机的前提是配置scrapyd，启动scrapyd</p>
+<h3 id="1、主机管理"><a href="#1、主机管理" class="headerlink" title="1、主机管理"></a>1、主机管理</h3><p>在主机管理界面创建一个主机</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/08a8f5bc-f998-4289-a3d1-19da88df31e0.png" alt="image.png"></p>
+<p>指定Scrapy项目部署主机的名称、 IP、端口来创建一个 主机</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/2ebee9d2-88f1-45aa-843a-c3ea957b1a1d.png" alt="image.png"></p>
+<p>点击创建即可完成添加</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/65c53f69-426a-464c-981e-71eed52f3c9f.png" alt="image.png"></p>
+<p>点击调度，进入爬虫列表</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/f0d9fffe-0966-4918-92c8-82c1c8891af0.png" alt="image.png"></p>
+<p>点击运行，即可启动爬虫</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/46fadf49-df2c-4c2d-a925-8b881de60ee4.png" alt="image.png"></p>
+<h3 id="2、项目管理"><a href="#2、项目管理" class="headerlink" title="2、项目管理"></a>2、项目管理</h3><p>将scarpy项目直接放到爬虫管理框架Gerapy的 <code>/gerapy/projects</code>目录下。或者直接将scarpy项目压缩上传。</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/761f0fb0-ea27-485f-bb9e-16a99be7384c.png" alt="image.png"></p>
+<p>可以在gerapy后台看到有个项目</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/2ceae8f7-dd17-4dd7-b230-fb9dcfe16d97.png" alt="image.png"></p>
+<p>点击部署按钮进行打包和部署，可以输入打包时的描述信息</p>
+<p>点击打包按钮，即可发现 Gerapy 会提示打包成功，同时在左侧显示打包的结果和打包名称。</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/a847c74c-4988-4939-961e-e56f986f33c9.png" alt="image.png"></p>
+<p>选择一个站点，点击右侧部署，将该项目部署到该站点上</p>
+<p><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/mxPOGyJvjWQknKa9/img/83e8dad0-8288-4b99-8df3-51cfb0d3732a.png" alt="image.png"></p>
+<h3 id="3、任务管理"><a href="#3、任务管理" class="headerlink" title="3、任务管理"></a>3、任务管理</h3><p>指定定时任务处理爬虫，暂未使用</p>
+<h2 id="五、后台启动"><a href="#五、后台启动" class="headerlink" title="五、后台启动"></a>五、后台启动</h2><p>1、后台启动scrapyd</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">nohup scrapyd &gt; /dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></table></figure>
+
+<p>2、后台启动gerapy</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">nohup gerapy runserver <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">8080</span> &gt; /dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、Gerapy配置异常处理"><a href="#六、Gerapy配置异常处理" class="headerlink" title="六、Gerapy配置异常处理"></a>六、Gerapy配置异常处理</h2><h3 id="1、SQLite版本异常"><a href="#1、SQLite版本异常" class="headerlink" title="1、SQLite版本异常"></a>1、SQLite版本异常</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/bin/gerapy&quot;</span>, line <span class="number">8</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    sys.exit(cmd())</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/gerapy/cmd/__init__.py&quot;</span>, line <span class="number">171</span>, <span class="keyword">in</span> cmd</span><br><span class="line">    manage()</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/gerapy/server/manage.py&quot;</span>, line <span class="number">24</span>, <span class="keyword">in</span> manage</span><br><span class="line">    execute_from_command_line(sys.argv)</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/core/management/__init__.py&quot;</span>, line <span class="number">381</span>, <span class="keyword">in</span> execute_from_command_line</span><br><span class="line">    utility.execute()</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/core/management/__init__.py&quot;</span>, line <span class="number">357</span>, <span class="keyword">in</span> execute</span><br><span class="line">    django.setup()</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/__init__.py&quot;</span>, line <span class="number">24</span>, <span class="keyword">in</span> setup</span><br><span class="line">    apps.populate(settings.INSTALLED_APPS)</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/apps/registry.py&quot;</span>, line <span class="number">114</span>, <span class="keyword">in</span> populate</span><br><span class="line">    app_config.import_models()</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/apps/config.py&quot;</span>, line <span class="number">211</span>, <span class="keyword">in</span> import_models</span><br><span class="line">    <span class="variable language_">self</span>.models_module = import_module(models_module_name)</span><br><span class="line">  File <span class="string">&quot;/usr/local/lib/python3.8/importlib/__init__.py&quot;</span>, line <span class="number">127</span>, <span class="keyword">in</span> import_module</span><br><span class="line">    <span class="keyword">return</span> _bootstrap._gcd_import(name[level:], package, level)</span><br><span class="line">  File <span class="string">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span>, line <span class="number">1014</span>, <span class="keyword">in</span> _gcd_import</span><br><span class="line">  File <span class="string">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span>, line <span class="number">991</span>, <span class="keyword">in</span> _find_and_load</span><br><span class="line">  File <span class="string">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span>, line <span class="number">975</span>, <span class="keyword">in</span> _find_and_load_unlocked</span><br><span class="line">  File <span class="string">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span>, line <span class="number">671</span>, <span class="keyword">in</span> _load_unlocked</span><br><span class="line">  File <span class="string">&quot;&lt;frozen importlib._bootstrap_external&gt;&quot;</span>, line <span class="number">848</span>, <span class="keyword">in</span> exec_module</span><br><span class="line">  File <span class="string">&quot;&lt;frozen importlib._bootstrap&gt;&quot;</span>, line <span class="number">219</span>, <span class="keyword">in</span> _call_with_frames_removed</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/contrib/auth/models.py&quot;</span>, line <span class="number">2</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    <span class="keyword">from</span> django.contrib.auth.base_user <span class="keyword">import</span> AbstractBaseUser, BaseUserManager</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/contrib/auth/base_user.py&quot;</span>, line <span class="number">47</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">AbstractBaseUser</span>(models.Model):</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/db/models/base.py&quot;</span>, line <span class="number">117</span>, <span class="keyword">in</span> __new__</span><br><span class="line">    new_class.add_to_class(<span class="string">&#x27;_meta&#x27;</span>, Options(meta, app_label))</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/db/models/base.py&quot;</span>, line <span class="number">321</span>, <span class="keyword">in</span> add_to_class</span><br><span class="line">    value.contribute_to_class(cls, name)</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/db/models/options.py&quot;</span>, line <span class="number">204</span>, <span class="keyword">in</span> contribute_to_class</span><br><span class="line">    <span class="variable language_">self</span>.db_table = truncate_name(<span class="variable language_">self</span>.db_table, connection.ops.max_name_length())</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/db/__init__.py&quot;</span>, line <span class="number">28</span>, <span class="keyword">in</span> __getattr__</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">getattr</span>(connections[DEFAULT_DB_ALIAS], item)</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/db/utils.py&quot;</span>, line <span class="number">201</span>, <span class="keyword">in</span> __getitem__</span><br><span class="line">    backend = load_backend(db[<span class="string">&#x27;ENGINE&#x27;</span>])</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/db/utils.py&quot;</span>, line <span class="number">110</span>, <span class="keyword">in</span> load_backend</span><br><span class="line">    <span class="keyword">return</span> import_module(<span class="string">&#x27;%s.base&#x27;</span> % backend_name)</span><br><span class="line">  File <span class="string">&quot;/usr/local/lib/python3.8/importlib/__init__.py&quot;</span>, line <span class="number">127</span>, <span class="keyword">in</span> import_module</span><br><span class="line">    <span class="keyword">return</span> _bootstrap._gcd_import(name[level:], package, level)</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py&quot;</span>, line <span class="number">66</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    check_sqlite_version()</span><br><span class="line">  File <span class="string">&quot;/root/app/pyprocess/env-python3.8/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py&quot;</span>, line <span class="number">63</span>, <span class="keyword">in</span> check_sqlite_version</span><br><span class="line">    <span class="keyword">raise</span> ImproperlyConfigured(<span class="string">&#x27;SQLite 3.8.3 or later is required (found %s).&#x27;</span> % Database.sqlite_version)</span><br><span class="line">django.core.exceptions.ImproperlyConfigured: SQLite <span class="number">3.8</span><span class="number">.3</span> <span class="keyword">or</span> later <span class="keyword">is</span> required (found <span class="number">3.7</span><span class="number">.17</span>).</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-1、SQLite异常解决办法"><a href="#1-1、SQLite异常解决办法" class="headerlink" title="1.1、SQLite异常解决办法"></a>1.1、SQLite异常解决办法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 参考链接</span></span><br><span class="line"><span class="comment"># https://zhuanlan.zhihu.com/p/497831108</span></span><br><span class="line"><span class="comment"># https://www.sqlite.org/download.html</span></span><br><span class="line"><span class="comment"># https://www.sqlite.org/2024/sqlite-autoconf-3470100.tar.gz</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#下载sqlite3</span></span><br><span class="line">wget https://www.sqlite.org/<span class="number">2024</span>/sqlite-autoconf-<span class="number">3470100.</span>tar.gz</span><br><span class="line"></span><br><span class="line"><span class="comment">#解压并安装sqlite3</span></span><br><span class="line">$ tar -zxvf sqlite-autoconf-<span class="number">3270200.</span>tar.gz</span><br><span class="line">$ cd sqlite-autoconf-<span class="number">3270200</span></span><br><span class="line">$ ./configure --prefix=/usr/local</span><br><span class="line">$ make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置软链接</span></span><br><span class="line">$ mv /usr/<span class="built_in">bin</span>/sqlite3  /usr/<span class="built_in">bin</span>/sqlite3_old</span><br><span class="line">$ ln -s /usr/local/<span class="built_in">bin</span>/sqlite3   /usr/<span class="built_in">bin</span>/sqlite3</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改.bashrc文件</span></span><br><span class="line"><span class="comment">#在用户目录下.bashrc文件最后一行添加</span></span><br><span class="line">export LD_LIBRARY_PATH=<span class="string">&quot;/usr/local/lib&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#并在终端输入立即生效命令</span></span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、定时清理日志"><a href="#2、定时清理日志" class="headerlink" title="2、定时清理日志"></a>2、定时清理日志</h3><p>在项目运行过程中，会产生大量的日志文件，需要对日志文件进行定时清理，解决办法如下</p>
+<p>1、定时清理日志脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找并清空日志</span></span><br><span class="line">find /root/app/pyprocess/gerapy/projects/Ldoscrapyproducts/logs/Ldoscrapyproducts -<span class="built_in">type</span> f -name <span class="string">&quot;*.log&quot;</span> -<span class="built_in">exec</span> truncate -s <span class="number">0</span> &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+<p>2、crontab 配置定时任务</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">crontab -e </span><br><span class="line"></span><br><span class="line">*/<span class="number">10</span> * * * * /root/app/pyprocess/gerapy/projects/Ldoscrapyproducts/clear_logs.sh</span><br><span class="line"></span><br><span class="line">chmod <span class="number">777</span> clear_log.sh</span><br></pre></td></tr></table></figure>
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2024/12/12/hello-world-xgzhai/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">hello world xgzhai</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2024/12/06/hello-world/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Hello World</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="https://s.gravatar.com/avatar/2d6b803eea37de0257620d5fabee7e64?s=200&amp;r=g&amp;d=retro" class="soft-size--round soft-style--box" alt="Sukoshi">
+    
+    
+      <h2>Sukoshi</h2>
+    
+    
+      <p>贵在坚持</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>3</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>flex-block主题部分重构，详情查看https://github.com/miiiku/flex-block</p>
+  </div>
+</section>
+
+
+      <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+      <span>CATEGORIES</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categories-list">
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2024 <a href="/" target="_blank">John Doe</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  
+
+
+
+
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
